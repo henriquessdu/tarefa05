@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Faculdade Exemplo</title>
+    <title>Faculdade EXEMPLO® | A melhor de Sorocaba</title>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
             margin: 0;
@@ -14,10 +15,20 @@
             padding: 20px;
         }
         header {
-            background: #004080;
+            background: linear-gradient(135deg, #004080, #0066cc);
             color: white;
         }
+        header h1, header p {
+            text-align: center;
+        }
+
+        header p {
+            margin-top: -10px;
+            color: #48a3ff;
+        }
         nav {
+            display: flex;
+            justify-content: center;
             background: #0066cc;
         }
         nav a {
@@ -26,40 +37,67 @@
             text-decoration: none;
         }
         .banner {
-            background: gray;
-            height: 200px;
-            text-align: center;
-            color: white;
+            position: relative;
+            height: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden; 
+            }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("campus.jpg") center/cover no-repeat;
+            filter: blur(6px) brightness(0.7);
+            transform: scale(1.1);
+            z-index: 0;
         }
+        .banner h2 {
+            position: relative;
+            z-index: 1;
+        }
+        
         section {
-            margin: 20px 0;
+            width: 800px;
+            margin: 20px auto;
             background: white;
-            padding: 15px;
+            padding: 15px 35px;
             border: 1px solid #ddd;
+            border-radius: 12px;
         }
+        
         footer {
             background: #222;
             color: white;
             text-align: center;
+        }
+
+        header img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+            max-width: 150px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Faculdade Exemplo</h1>
-    <p>Transformando conhecimento em futuro</p>
-    <meta name="description" content="Faculdade Exemplo: ensino superior de qualidade com cursos de graduação e pós-graduação em Administração, Ciência da Computação, Direito, Engenharia Civil e Medicina. Inscreva-se." />
+    <img src="logo.svg" alt="Logo Faculdade EXEMPLO®">
+    <h1>Faculdade EXEMPLO®</h1>
+    <p>Onde os fracos não tem vez</p>
+    <meta name="description" content="Faculdade EXEMPLO®: ensino superior de qualidade com cursos de graduação e pós-graduação em Administração, Ciência da Computação, Direito, Engenharia Civil e Medicina. Inscreva-se." />
 </header>
 
 <nav>
-    <a href="index.html" title="Página inicial da Faculdade Exemplo">Início</a>
-    <a href="cursos.html" title="Cursos da Faculdade Exemplo">Cursos</a>
-    <a href="sobre.html" title="Sobre a Faculdade Exemplo">Sobre</a>
-    <a href="contato.html" title="Entre em contato com a Faculdade Exemplo">Contato</a>
+    <a href="index.html" title="Página inicial da Faculdade EXEMPLO®">Início</a>
+    <a href="cursos.html" title="Cursos da Faculdade EXEMPLO®">Cursos</a>
+    <a href="sobre.html" title="Sobre a Faculdade EXEMPLO®">Sobre</a>
+    <a href="contato.html" title="Entre em contato com a Faculdade EXEMPLO®">Contato</a>
 </nav>
 
 <div class="banner">
@@ -69,7 +107,7 @@
 <main>
     <section>
         <h2>Quem Somos</h2>
-        <p>A Faculdade Exemplo é a instituição mais conceituada de ensino superior de Sorocaba, dedicada à formação de profissionais preparados para os desafios do mercado com cursos de graduação e pós-graduação.</p>
+        <p>A Faculdade EXEMPLO® é a instituição mais conceituada de ensino superior de Sorocaba, dedicada à formação de profissionais preparados para os desafios do mercado com cursos de graduação e pós-graduação.</p>
         <p>Nossa missão é transformar a vida dos nossos alunos por meio de práticas acadêmicas alinhadas às demandas atuais.</p>
     </section>
 
@@ -86,22 +124,23 @@
 
     <section>
         <h2>Infraestrutura</h2>
-        <img src="campus.jpg" alt="Vista do campus da Faculdade Exemplo com biblioteca e laboratórios">
+        <img src="campus.jpg" alt="Vista do campus da Faculdade EXEMPLO® com biblioteca e laboratórios" style="margin: 0 auto;width: 800px;border-radius: 12px;">
         <p>Nosso campus conta com biblioteca, laboratórios modernos e áreas de convivência.</p>
         <p>Estamos sempre investindo em tecnologia e inovação.</p>
     </section>
 
     <section>
         <h2>Corpo Docente</h2>
+                <img src="docentes.jpg" alt="Docentes da Faculdade EXEMPLO®" style="margin: 0 auto;width: 800px;border-radius: 12px;">
         <p>Nosso corpo docente é formado por mestres e doutores com produção científica em áreas como gestão e finanças, inteligência artificial, direito público e privado, estruturas e materiais e ciências da saúde.</p>
-        <p>Os professores participam de grupos de pesquisa e projetos de extensão, integrando teoria e prática.</p>
+        <p>Os professores literalmente criaram a ciência e participam de grupos de pesquisa e projetos de extensão, integrando teoria e prática.</p>
     </section>
 
     <section>
         <h2>Notícias Recentes</h2>
         <article itemscope itemtype="https://schema.org/NewsArticle">
             <h3 itemprop="headline">Semana Acadêmica 2025</h3>
-            <p itemprop="description">A Faculdade Exemplo realizou sua tradicional Semana Acadêmica com palestras e workshops.</p>
+            <p itemprop="description">A Faculdade EXEMPLO® realizou sua tradicional Semana Acadêmica com palestras e workshops.</p>
         </article>
         <article itemscope itemtype="https://schema.org/NewsArticle">
             <h3 itemprop="headline">Parceria Internacional</h3>
@@ -112,7 +151,7 @@
     <section>
         <h2>Depoimentos</h2>
         <blockquote>
-            <p itemprop="reviewBody">"A Faculdade Exemplo mudou minha vida. Hoje atuo em uma grande empresa graças à formação recebida."</p>
+            <p itemprop="reviewBody">"A Faculdade EXEMPLO® mudou minha vida. Hoje atuo em uma grande empresa graças à formação recebida."</p>
             <footer>
                 <span itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <span itemprop="name">- Ex-Aluno</span>
@@ -143,17 +182,19 @@
 </main>
 
 <footer>
-    <p>&copy; 2025 Faculdade Exemplo - Todos os direitos reservados</p>
-    <p>Endereço: Rua da Educação, 123 - Cidade Exemplo</p>
+    <p>&copy; 2025 Faculdade EXEMPLO® - Todos os direitos reservados</p>
+    <p>Endereço: Rua da Educação, 123 - Sorocaba</p>
     <p>Telefone: (00) 1234-5678</p>
 
-    <p><a href="/sitemap.xml" title="Sitemap da Faculdade Exemplo">Sitemap</a></p>
-    <p><a href="/privacidade.html" title="Política de Privacidade da Faculdade Exemplo">Política de Privacidade</a></p>
-    <p><a href="/termos.html" title="Termos de Uso da Faculdade Exemplo">Termos de Uso</a></p>
+    <h3>Links úteis</h3>
+    <p><a href="/sitemap.xml" title="Sitemap da Faculdade EXEMPLO®">Sitemap</a></p>
+    <p><a href="/privacidade.html" title="Política de Privacidade da Faculdade EXEMPLO®">Política de Privacidade</a></p>
+    <p><a href="/termos.html" title="Termos de Uso da Faculdade EXEMPLO®">Termos de Uso</a></p>
 
-    <p><a href="https://www.facebook.com/faculdadeexemplo" title="Página do Facebook da Faculdade Exemplo">Facebook</a></p>
-    <p><a href="https://www.instagram.com/faculdadeexemplo" title="Página do Instagram da Faculdade Exemplo">Instagram</a></p>
-    <p><a href="https://www.linkedin.com/school/faculdadeexemplo/" title="Página do LinkedIn da Faculdade Exemplo">LinkedIn</a></p>
+    <h3>Redes sociais</h3>
+    <p><a href="https://www.facebook.com/faculdadeexemplo" title="Página do Facebook da Faculdade EXEMPLO®">Facebook</a></p>
+    <p><a href="https://www.instagram.com/faculdadeexemplo" title="Página do Instagram da Faculdade EXEMPLO®">Instagram</a></p>
+    <p><a href="https://www.linkedin.com/school/faculdadeexemplo/" title="Página do LinkedIn da Faculdade EXEMPLO®">LinkedIn</a></p>
 </footer>
 
 </body>
